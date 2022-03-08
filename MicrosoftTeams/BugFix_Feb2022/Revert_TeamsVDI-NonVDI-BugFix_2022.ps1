@@ -1,28 +1,4 @@
-﻿<#------------------------------------------------------------------------
-NOTE: 
-            This package reverts the bugfix from 2022 issues back to normal per machine installer with updates enabled and cleans away the non vdi requirements.
-            This makes is easy for the users to jump back to a normal installation of Teams after the issue has been resolved. 
-
-
-            The 2022 Bug is descriped here - https://dybbugt.no/2022/2067/
-NOTE End
-------------------------------------
- 
- This script will: 
-
- - Stop running Teams
- - Uninstall existing versions (machin installer and user installer)
- - Clear the Teams Cache from user profiles
-- Clear web browser caches - Teams caches stuff there as well... You will be warned before this step with a confirmation
- - Remove the needed registry key to be able to install the VDI installer to NON-VDI machines
- - Download the latest MSI based  installer from Microsoft for x64. 
- - Install it onto the machine
- - Start Teams when installed to inject it into the users profile for user based installation as normal
-
- 
- Creator info: Geir Dybbugt - https://dybbugt.no
- Modified - 21.02.2022
-------------------------------------------------------------------------####>
+﻿
 
 # Set console window title
     $host.ui.RawUI.WindowTitle = "Dybbugt.no - Revert - Teams 1.4 For VDI on NonVDI - 2022 Bugfix - https://dybbugt.no/2022/2067/"
